@@ -1,0 +1,3 @@
+/home/zenearx/Study Stuff/CS61C/GIT/cs61c/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/zenearx/Study Stuff/CS61C/GIT/cs61c/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/zenearx/Study Stuff/CS61C/GIT/cs61c/cmake-build-debug/CMakeFiles/cs61c.dir
