@@ -1,10 +1,7 @@
 #include <string.h>
 #include "pwd_checker.h"
-<<<<<<< HEAD
 #include <assert.h>
-=======
 
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
 /*
 Password checker
 
@@ -25,31 +22,19 @@ For the simplicity of this exercise:
 /* Returns true if the length of PASSWORD is at least 10, false otherwise */
 bool check_length(const char *password) {
     int length = strlen(password);
-<<<<<<< HEAD
     bool meets_len_req = (length >= 10);
-=======
-    bool meets_len_req = (length <= 10);
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
     return meets_len_req;
 }
 
 /* Returns true if LETTER is in the range [LOWER, UPPER], false otherwise */
 bool check_range(char letter, char lower, char upper) {
-<<<<<<< HEAD
     bool is_in_range = (letter >= lower && letter <= upper);
-=======
-    bool is_in_range = (letter > lower && letter < upper);
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
     return is_in_range;
 }
 
 /* Returns true if PASSWORD contains at least one upper case letter, false otherwise */
 bool check_upper(const char *password) {
-<<<<<<< HEAD
     while (*password) {
-=======
-    while (password != '\0') {
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
         bool is_in_range = check_range(*password, 'A', 'Z');
         if (is_in_range) {
             return true;
@@ -73,13 +58,8 @@ bool check_lower(const char *password) {
 
 /* Returns true if PASSWORD contains at least one number, false otherwise */
 bool check_number(const char *password) {
-<<<<<<< HEAD
     while (*password) {
         if (check_range(*password, '0', '9')) {
-=======
-    while (password != '\0') {
-        if (check_range(password, 0, 9)) {
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
             return true;
         }
         ++password;
@@ -93,11 +73,7 @@ bool check_name(const char *first_name, const char *last_name, const char *passw
         To exit the man pages, press 'q' */
     /* Hint: a NULL pointer will evaluate to False in a logical statement while a non-NULL pointer
         will evaluate to True */
-<<<<<<< HEAD
     const char *first = strstr(password, first_name);
-=======
-    const char *first = strstr(*password, first_name);
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
     const char *last = strstr(password, last_name);
     return (!first && !last);
 }
