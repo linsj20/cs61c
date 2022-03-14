@@ -51,14 +51,9 @@ pow:
     # BEGIN PROLOGUE
     # FIXME Need to save the calle saved register(s)
     # END PROLOGUE
-<<<<<<< HEAD
     addi sp sp -4
     sw s0 0(sp)
     li s0, 1
-
-=======
-    li s0, 1
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
 pow_loop:
     beq a1, zero, pow_end
     mul s0, s0, a0
@@ -69,11 +64,8 @@ pow_end:
     # BEGIN EPILOGUE
     # FIXME Need to restore the calle saved register(s)
     # END EPILOGUE
-<<<<<<< HEAD
     lw s0 0(sp)
     addi sp sp 4
-=======
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
     ret
 
 # Increments the elements of an array in-place.
@@ -85,15 +77,10 @@ pow_end:
 inc_arr:
     # BEGIN PROLOGUE
     # FIXME What other registers need to be saved?
-<<<<<<< HEAD
     addi sp, sp, -12
     sw ra, 0(sp)
     sw s0 4(sp)
     sw s1 8(sp)
-=======
-    addi sp, sp, -4
-    sw ra, 0(sp)
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
     # END PROLOGUE
     mv s0, a0 # Copy start of array to saved register
     mv s1, a1 # Copy length of array to saved register
@@ -116,13 +103,9 @@ inc_arr_end:
     # BEGIN EPILOGUE
     # FIXME What other registers need to be restored?
     lw ra, 0(sp)
-<<<<<<< HEAD
     lw s0 4(sp)
     lw s1 8(sp)
     addi sp, sp, 12
-=======
-    addi sp, sp, 4
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
     # END EPILOGUE
     ret
 
@@ -138,7 +121,6 @@ helper_fn:
     # BEGIN PROLOGUE
     # FIXME: YOUR CODE HERE
     # END PROLOGUE
-<<<<<<< HEAD
     addi sp sp -4
     sw s0 0(sp)
     lw t1, 0(a0)
@@ -146,11 +128,6 @@ helper_fn:
     sw s0, 0(a0)
     lw s0 0(sp)
     addi sp sp 4
-=======
-    lw t1, 0(a0)
-    addi s0, t1, 1
-    sw s0, 0(a0)
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
     # BEGIN EPILOGUE
     # FIXME: YOUR CODE HERE
     # END EPILOGUE

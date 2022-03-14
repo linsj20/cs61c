@@ -17,11 +17,7 @@ main:
 
     # Load the address of the "square" function into a1 (hint: check out "la" on the green sheet)
     ### YOUR CODE HERE ###
-<<<<<<< HEAD
 	la a1, square
-=======
-
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
 
     # Issue the call to map
     jal ra, map
@@ -40,11 +36,7 @@ main:
 
     # Load the address of the "decrement" function into a1 (should be very similar to before)
     ### YOUR CODE HERE ###
-<<<<<<< HEAD
 	la a1, decrement
-=======
-
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
 
     # Issue the call to map
     jal ra, map
@@ -60,13 +52,9 @@ main:
 map:
     # Prologue: Make space on the stack and back-up registers
     ### YOUR CODE HERE ###
-<<<<<<< HEAD
-	addi sp, sp, -8
+	  addi sp, sp, -8
     sw s0, 0(sp)
     sw ra, 4(sp)
-=======
-
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
     beq a0, x0, done # If we were given a null pointer (address 0), we're done.
 
     add s0, a0, x0 # Save address of this node in s0
@@ -78,61 +66,35 @@ map:
     # Load the value of the current node into a0
     # THINK: Why a0?
     ### YOUR CODE HERE ###
-<<<<<<< HEAD
-	lw a0, 0(s0)
-=======
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
+	  lw a0, 0(s0)
 
     # Call the function in question on that value. DO NOT use a label (be prepared to answer why).
     # Hint: Where do we keep track of the function to call? Recall the parameters of "map".
     ### YOUR CODE HERE ###
-<<<<<<< HEAD
     jalr ra, s1, 0
     
     # Store the returned value back into the node
     # Where can you assume the returned value is?
     ### YOUR CODE HERE ###
-	sw a0, 0(s0)
-=======
-
-    # Store the returned value back into the node
-    # Where can you assume the returned value is?
-    ### YOUR CODE HERE ###
-
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
+	  sw a0, 0(s0)
     # Load the address of the next node into a0
     # The address of the next node is an attribute of the current node.
     # Think about how structs are organized in memory.
     ### YOUR CODE HERE ###
-<<<<<<< HEAD
-	lw a0, 4(s0)
+  	lw a0, 4(s0)
     # Put the address of the function back into a1 to prepare for the recursion
     # THINK: why a1? What about a0?
     ### YOUR CODE HERE ###
-	add a1, x0, s1
+	  add a1, x0, s1
     # Recurse
     ### YOUR CODE HERE ###
-	jal ra, map
+	  jal ra, map
 done:
     # Epilogue: Restore register values and free space from the stack
     ### YOUR CODE HERE ###
-	lw s0, 0(sp) 
+	  lw s0, 0(sp) 
     lw ra, 4(sp)
     addi sp, sp, 8
-=======
-
-    # Put the address of the function back into a1 to prepare for the recursion
-    # THINK: why a1? What about a0?
-    ### YOUR CODE HERE ###
-
-    # Recurse
-    ### YOUR CODE HERE ###
-
-done:
-    # Epilogue: Restore register values and free space from the stack
-    ### YOUR CODE HERE ###
-
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
     jr ra # Return to caller
 
 # === Definition of the "square" function ===

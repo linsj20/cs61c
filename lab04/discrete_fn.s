@@ -101,15 +101,11 @@ main:
 # a1 is the address of the "output" array (defined above).
 f:
     # YOUR CODE GOES HERE!
-<<<<<<< HEAD
     addi t0 a0 3
-	addi t1 x0 4
+	  addi t1 x0 4
     mul t0 t0 t1
     add t0 t0 a1
-	lw a0 0(t0)
-=======
-
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
+	  lw a0 0(t0)
     jr ra               # Always remember to jr ra after your function!
 
 # prints out one integer

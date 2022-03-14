@@ -1,11 +1,7 @@
 .globl factorial
 
 .data
-<<<<<<< HEAD
 n: .word 7
-=======
-n: .word 8
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
 
 .text
 main:
@@ -26,7 +22,6 @@ main:
 
 factorial:
     # YOUR CODE HERE
-<<<<<<< HEAD
 	addi t0, x0, 1
     beq a0, t0, r
 	addi sp, sp, -8
@@ -40,5 +35,3 @@ factorial:
     mul a0, a0, a1
 r:
 	jr ra
-=======
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba

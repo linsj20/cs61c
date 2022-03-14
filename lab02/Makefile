@@ -1,9 +1,5 @@
 CC=gcc
-<<<<<<< HEAD
 CFLAGS=-Wall -std=c99 -g
-=======
-CFLAGS=-Wall -std=c99
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
 
 all: linked_list vector bit_ops
 
