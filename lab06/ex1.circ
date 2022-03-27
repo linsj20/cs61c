@@ -5,6 +5,7 @@
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
       <a name="appear" val="center"/>
+      <a name="facing" val="west"/>
     </tool>
     <tool name="Pin">
       <a name="facing" val="north"/>
@@ -189,6 +190,55 @@ end TCL_Generic;
       <a name="radix" val="16"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="0" loc="(260,200)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="bit0" val="1"/>
+      <a name="bit10" val="0"/>
+      <a name="bit11" val="0"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="1"/>
+      <a name="bit16" val="1"/>
+      <a name="bit17" val="1"/>
+      <a name="bit18" val="1"/>
+      <a name="bit19" val="1"/>
+      <a name="bit2" val="1"/>
+      <a name="bit20" val="1"/>
+      <a name="bit21" val="1"/>
+      <a name="bit22" val="1"/>
+      <a name="bit23" val="1"/>
+      <a name="bit24" val="1"/>
+      <a name="bit25" val="2"/>
+      <a name="bit26" val="2"/>
+      <a name="bit27" val="2"/>
+      <a name="bit28" val="2"/>
+      <a name="bit29" val="2"/>
+      <a name="bit3" val="1"/>
+      <a name="bit30" val="2"/>
+      <a name="bit31" val="2"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="0"/>
+      <a name="bit9" val="0"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="32"/>
+    </comp>
+    <comp lib="0" loc="(350,190)" name="Bit Extender">
+      <a name="in_width" val="5"/>
+      <a name="out_width" val="32"/>
+      <a name="type" val="zero"/>
+    </comp>
+    <comp lib="0" loc="(360,250)" name="Bit Extender">
+      <a name="in_width" val="7"/>
+      <a name="out_width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(380,290)" name="Constant">
+      <a name="value" val="0x5"/>
+      <a name="width" val="5"/>
+    </comp>
     <comp lib="0" loc="(620,200)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -198,5 +248,31 @@ end TCL_Generic;
       <a name="radix" val="16"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="3" loc="(430,200)" name="Shifter">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="3" loc="(510,200)" name="Adder">
+      <a name="width" val="32"/>
+    </comp>
+    <wire from="(230,200)" to="(260,200)"/>
+    <wire from="(280,190)" to="(310,190)"/>
+    <wire from="(280,210)" to="(300,210)"/>
+    <wire from="(300,210)" to="(300,250)"/>
+    <wire from="(300,250)" to="(320,250)"/>
+    <wire from="(320,240)" to="(320,250)"/>
+    <wire from="(350,190)" to="(360,190)"/>
+    <wire from="(360,170)" to="(360,190)"/>
+    <wire from="(360,170)" to="(450,170)"/>
+    <wire from="(360,250)" to="(370,250)"/>
+    <wire from="(370,190)" to="(370,250)"/>
+    <wire from="(370,190)" to="(390,190)"/>
+    <wire from="(380,210)" to="(380,290)"/>
+    <wire from="(380,210)" to="(390,210)"/>
+    <wire from="(430,200)" to="(440,200)"/>
+    <wire from="(440,200)" to="(440,210)"/>
+    <wire from="(440,210)" to="(470,210)"/>
+    <wire from="(450,170)" to="(450,190)"/>
+    <wire from="(450,190)" to="(470,190)"/>
+    <wire from="(510,200)" to="(620,200)"/>
   </circuit>
 </project>
