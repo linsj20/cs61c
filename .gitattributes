@@ -1,13 +1,1 @@
-<<<<<<< HEAD
-*.py text eol=lf
-*.c text eol=lf
-=======
-*.c text eol=lf
-*.circ text eol=lf
->>>>>>> 53eff2a7a7e0c86848ac8fa2491e484767dec1ba
-*.h text eol=lf
-*.md text eol=lf
-*.s text eol=lf
-*.sh text eol=lf
-*.txt text eol=lf
-Makefile text eol=lf
+* text=auto eol=lf
